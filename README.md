@@ -10,4 +10,4 @@ GAME RULES:
 - The player can choose to 'Hold', which means that his ROUND score gets added to his GLBAL score. After     that, it's the next player's turn
 - The first player to reach 100 points on GLOBAL score wins the game
 
-*There are [1](https://github.com/SamaneYaghoobi/JavaScript-Exercises/tree/master/Challenge3), [2](https://github.com/SamaneYaghoobi/JavaScript-Exercises/tree/master/Challenge4), [3](https://github.com/SamaneYaghoobi/JavaScript-Exercises/tree/master/Challenge5) other versions of this game* 
+*There are [1](https://github.com/SamaneYaghoobi/JavaScript-Exercises/tree/master/Challenge3), [2](https://github.com/SamaneYaghoobi/JavaScript-Exercises/tree/master/Challenge4), [3](https://github.com/SamaneYaghoobi/JavaScript-Exercises/tree/master/Challenge5) other versions of this game.* 
