@@ -2,13 +2,16 @@ var scores, roundScore, activePlayer, gamePlaying;
 var diceDOM = document.querySelector('.dice');
 init();
 
+//click Roll Dice
 document.querySelector('.btn-roll').addEventListener('click', function () {
     if (gamePlaying) {
+        //make random number for dice
         var dice = Math.floor(Math.random() * 6) + 1;
         diceDOM.style.display = 'block';
         diceDOM.src = 'dice-' + dice + '.png';
-
+        //active player can roll dice until dice isn't 1
         if (dice !== 1) {
+            //update Roundscore
             roundScore += dice;
             document.querySelector('#current-' + activePlayer).textContent = roundScore;
         } else
@@ -17,12 +20,14 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
 
 });
 
+//click Hold
 document.querySelector('.btn-hold').addEventListener('click', function () {
     if (gamePlaying) {
+        //Update active player Score
         scores[activePlayer] += roundScore;
         document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
-
-        if (scores[activePlayer] >= 20) {
+        //check if active player win
+        if (scores[activePlayer] >= 100) {
             diceDOM.style.display = 'none';
             document.querySelector('#name-' + activePlayer).textContent = 'WINNER!';
             document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
@@ -36,6 +41,7 @@ document.querySelector('.btn-hold').addEventListener('click', function () {
 
 });
 
+//click New Game
 document.querySelector('.btn-new').addEventListener('click', init);
 
 function init() {
